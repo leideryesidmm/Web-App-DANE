@@ -9,9 +9,16 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Consultar Persona</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <div>
+        <form action="validarPersona.do">
+        <h3>Por favor digite el nombre de la persona a consultar: <input type="text" name="nombre" value="alguien"></h3>
+        <br><br>
+        <input type="submit" name="boton" value="Consultar">
+        </form>
+        </div>
+        
     </body>
 </html>

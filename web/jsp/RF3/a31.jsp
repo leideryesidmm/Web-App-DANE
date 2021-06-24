@@ -9,9 +9,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Datos Persona</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+       <div style="text-align: center;"> <br><br>
+        <%
+            out.println(request.getSession().getAttribute("tabla"));
+        %>
+        <br><br>
+        <a href="../../index.html"><button>Volver al inicio</button></a>
+        </div>
     </body>
 </html>

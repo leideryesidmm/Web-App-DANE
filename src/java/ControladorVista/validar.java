@@ -5,6 +5,7 @@
  */
 package ControladorVista;
 
+import Negocio.WebappDANE;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -16,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author USER
  */
-public class sa1 extends HttpServlet {
+public class validar extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -29,19 +30,20 @@ public class sa1 extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet sa1</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet sa1 at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+            int cedula=Integer.parseInt(request.getParameter("cedula"));
+            String nombre=request.getParameter("name");
+            String email=request.getParameter("email");
+            String direccion=request.getParameter("direccion");
+            int idmunicipio=Integer.parseInt(request.getParameter("municipio"));
+            
+            WebappDANE dn=new WebappDANE();
+            if(dn.validarFormulario(cedula,nombre,email,direccion)){
+                request.getRequestDispatcher("./a13.jsp").forward(request, response);
+                dn.registrarPersona(cedula,nombre,email,direccion,idmunicipio);
+            }else{
+                request.getRequestDispatcher("./Error-a1.jsp").forward(request, response);
+            }
+            
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

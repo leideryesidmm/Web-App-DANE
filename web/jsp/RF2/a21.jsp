@@ -12,6 +12,12 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <div style="text-align: center;"> <br><br>
+        <%
+            out.println(request.getSession().getAttribute("municipios"));
+        %>
+        <br><br>
+        <a href="../../index.html"><button>Volver al inicio</button></a>
+        </div>
     </body>
 </html>

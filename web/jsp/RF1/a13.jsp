@@ -9,9 +9,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Registro Exitoso</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <br><br><br><br><br>
+        <div style="text-align: center;border: black 5px solid">
+            
+        <h1>Registro con éxito</h1><br><br>
+        <a href="../../index.html"><button>Volver al inicio</button></a>
+        <br><br><br>
+        </div>
     </body>
 </html>

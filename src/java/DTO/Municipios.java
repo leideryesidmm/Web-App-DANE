@@ -108,7 +108,7 @@ public class Municipios implements Serializable {
 
     @Override
     public String toString() {
-        return "DTO.Municipios[ idMunicipio=" + idMunicipio + " ]";
+        return "idMunicipio=" + idMunicipio + " nombre:"+ nombre +"\n";
     }
     
 }

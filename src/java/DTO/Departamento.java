@@ -5,7 +5,7 @@
  */
 package DTO;
 
-import java.io.Serializable;
+import java.io.Serializable; 
 import java.util.Collection;
 import javax.persistence.Basic;
 import javax.persistence.Column;

@@ -10,17 +10,21 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Seleccionar Departamento</title>
     </head>
     <body>
-    <from action="sa1.do">
+        <div style="text-align: center;"> <br><h3>Escoja el departamento al cual desea ingresar la persona:</h3><br>
+    <form action="leerdepartamento.do" method="post">
         <select name="departamento">
             <%
-                WebappDANE wa= new WebappDANE(); 
-                out.println(wa.mostrarDepartamentos()); 
+                WebappDANE wa= new WebappDANE();
+                out.println(wa.mostrarDepartamentos());
 
             %>
         </select>
-    </from>
+        
+        <input type="submit" name="boton" value="Registrar Persona">
+    </form>
+        </div>
     </body>
 </html>

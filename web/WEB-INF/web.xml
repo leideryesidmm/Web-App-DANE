@@ -1,12 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
-        <servlet-name>sa1</servlet-name>
-        <servlet-class>ControladorVista.sa1</servlet-class>
+        <servlet-name>leerdepartamento</servlet-name>
+        <servlet-class>ControladorVista.leerdepartamento</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>validar</servlet-name>
+        <servlet-class>ControladorVista.validar</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>validarPersona</servlet-name>
+        <servlet-class>ControladorVista.validarPersona</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>sa1</servlet-name>
-        <url-pattern>/sa1.do</url-pattern>
+        <servlet-name>leerdepartamento</servlet-name>
+        <url-pattern>/jsp/RF1/leerdepartamento.do</url-pattern>
+        <url-pattern>/jsp/RF2/leerdepartamento.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>validar</servlet-name>
+        <url-pattern>/jsp/RF1/validar.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>validarPersona</servlet-name>
+        <url-pattern>/jsp/RF3/validarPersona.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
